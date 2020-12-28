@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/jdk1.8-Lambda/jdk1.8-Lambda.iml" filepath="$PROJECT_DIR$/jdk1.8-Lambda/jdk1.8-Lambda.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdk1.8-Stream/jdk1.8-Stream.iml" filepath="$PROJECT_DIR$/jdk1.8-Stream/jdk1.8-Stream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdk1.8-Time/jdk1.8-Time.iml" filepath="$PROJECT_DIR$/jdk1.8-Time/jdk1.8-Time.iml" />
     </modules>
   </component>
 </project>
