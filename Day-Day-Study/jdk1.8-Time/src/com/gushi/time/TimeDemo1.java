@@ -16,7 +16,7 @@ public class TimeDemo1 {
         System.out.println(System.currentTimeMillis()); //毫秒
         System.out.println(System.nanoTime()); //纳秒
 //        System.out.println(System);
-//        dateTime();
+        dateTime();
 //        calendarTime();
         calendarTimeZone();
     }
