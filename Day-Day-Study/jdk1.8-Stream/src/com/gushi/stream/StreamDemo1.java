@@ -14,14 +14,14 @@ import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-/** stream的创建
+/**
+ * stream的创建
  * 数组和集合都可以创建一个流
- * */
+ */
 public class StreamDemo1 {
 
     public static void main(String[] args) {
 //        createStream();
-
 
 
     }
@@ -51,8 +51,6 @@ public class StreamDemo1 {
 
         //单个数据创建流
         Stream<Integer> integerStream1 = Stream.of(2);
-
-
 
 
     }

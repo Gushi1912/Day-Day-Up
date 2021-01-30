@@ -21,6 +21,7 @@ public class LambdaDemo1 {
     /**
      * 使用lambda表达式来替代Comparator实现类对象
      * 这种情况下我们就不需要来专门写一个实现类来重写方法
+     *
      * @param strings
      */
     public static void sortByLambda(String[] strings) {
@@ -32,7 +33,7 @@ public class LambdaDemo1 {
 
     private static void sortByComparator(String[] strings) {
         /* 测试自定义排序方法 */
-        Arrays.sort(strings,new LengthComparator());
+        Arrays.sort(strings, new LengthComparator());
         System.out.println(Arrays.toString(strings));
     }
 }
