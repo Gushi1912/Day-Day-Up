@@ -5,7 +5,10 @@ package com.gushi.stream.model;
  * @version 0.0.1
  * 2020/12/26
  */
-/** 创建一个测试类对象 */
+
+/**
+ * 创建一个测试类对象
+ */
 public class Student {
     private String name;
     private String sex;

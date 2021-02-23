@@ -52,7 +52,7 @@ public class TimeDemo3 {
      * LocalDateTime和ZoneId结合就可以转换成ZonedDateTime
      */
     public static void test2() {
-        LocalDateTime localDateTime = LocalDateTime.of(2019,12,26,12,12,12);
+        LocalDateTime localDateTime = LocalDateTime.of(2019, 12, 26, 12, 12, 12);
         ZonedDateTime zonedDateTime = localDateTime.atZone(ZoneId.systemDefault());
         ZonedDateTime zonedDateTime1 = localDateTime.atZone(ZoneId.of("America/New_York"));
         System.out.println(zonedDateTime1);
