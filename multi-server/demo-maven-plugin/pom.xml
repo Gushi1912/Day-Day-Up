@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.gushi</groupId>
+  <artifactId>demo-maven-plugin</artifactId>
+
+<!--  开发插件所使用的特有的打包类型-->
+  <packaging>maven-plugin</packaging>
+
+  <version>1.0-SNAPSHOT</version>
+  <name>demo-maven-plugin Maven Mojo</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+<!--    开发maven插件所必须依赖的核心包，推荐使用3，5以上版本的-->
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-plugin-api</artifactId>
+      <version>3.6.3</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+<!--    方便使用注解-->
+    <dependency>
+      <groupId>org.apache.maven.plugin-tools</groupId>
+      <artifactId>maven-plugin-annotations</artifactId>
+      <version>3.5.2</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+<!--      为了能在jdk1.8环境下能够编译通过-->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-plugin-plugin</artifactId>
+        <version>3.5</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
