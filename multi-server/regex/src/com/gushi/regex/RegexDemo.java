@@ -18,11 +18,14 @@ public class RegexDemo {
     }
 
     private static String test1(String str) {
-        String regex = "";
+        String regex = "\\s+";
+        boolean matches = Pattern.matches(regex, str);
+        System.out.println(matches);
         return getMatchStr(str, regex);
     }
 
     private static String getMatchStr(String str, String regex){
+
         Matcher matcher = Pattern.compile(regex).matcher(str);
         System.out.println(matcher);
         matcher.find();
