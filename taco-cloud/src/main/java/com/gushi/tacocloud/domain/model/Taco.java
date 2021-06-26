@@ -1,7 +1,9 @@
 package com.gushi.tacocloud.domain.model;
 
 import com.sun.istack.internal.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Size;
 import java.util.List;
@@ -11,6 +13,8 @@ import java.util.List;
  * @date 2021/1/28
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Taco {
 
     // end::allButValidation[]

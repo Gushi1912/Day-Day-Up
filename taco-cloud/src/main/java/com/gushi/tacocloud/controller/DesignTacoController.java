@@ -1,14 +1,17 @@
-package com.gushi.tacocloud.tacos;
+package com.gushi.tacocloud.controller;
 
 import com.gushi.tacocloud.domain.model.Ingredient;
 import com.gushi.tacocloud.domain.model.Taco;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.gushi.tacocloud.domain.model.Ingredient.Type;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,6 +25,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/design")
 public class DesignTacoController {
 
+    @GetMapping("/")
     public String showDesignForm(Model model) {
         List<Ingredient> ingredients = Arrays.asList(
                 new Ingredient("FLTO", "Flour Tortilla", Type.WRAP),
@@ -39,8 +43,14 @@ public class DesignTacoController {
         for (Type type : values) {
             model.addAttribute(type.toString().toLowerCase(),filterByType(ingredients,type));
         }
-        model.addAttribute("desgn",new Taco());
+        model.addAttribute("design",new Taco());
         return "design";
+    }
+
+    @PostMapping("/")
+    public String processDesign(Taco design) {
+        log.info("Processing design: {}" , design);
+        return "redirect:/orders/current";
     }
 
     private List<Ingredient> filterByType(List<Ingredient> ingredients, Type type) {

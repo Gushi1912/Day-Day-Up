@@ -1,0 +1,8 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  thymeleaf:
+    #在开发的时候禁用缓存
+    cache: false
