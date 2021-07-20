@@ -2,16 +2,28 @@ package com.gushi.tacocloud.domain.model;
 
 import lombok.Data;
 
+import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
+import java.time.LocalDateTime;
 
 /**
  * @author Gushi1912
  * @date 2021/2/1
  */
 @Data
+@Entity
+@Table(name = "t_order")
 public class Order {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    private LocalDateTime createTime;
+
+
     @NotBlank(message = "Name is required")
     private String name;
     @NotBlank(message = "Street is required")

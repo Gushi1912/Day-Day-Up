@@ -5,7 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -15,7 +17,15 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "t_taco")
 public class Taco {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    private LocalDateTime createTime;
 
     // end::allButValidation[]
     @NotNull
@@ -25,6 +35,7 @@ public class Taco {
     // end::allButValidation[]
     @Size(min=1, message="You must choose at least 1 ingredient")
     // tag::allButValidation[]
-    private List<String> ingredients;
+    @ManyToMany(targetEntity = Ingredient.class)
+    private List<Ingredient> ingredients;
 
 }

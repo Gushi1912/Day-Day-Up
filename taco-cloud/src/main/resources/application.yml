@@ -4,5 +4,11 @@ server:
     context-path: /
 spring:
   thymeleaf:
-    #在开发的时候禁用缓存
+    #寮�鍙戞椂绂佺敤缂撳瓨
     cache: false
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/taco_cloud?characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+    password: 62216991gsy
+    username: root
+
