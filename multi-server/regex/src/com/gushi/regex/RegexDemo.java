@@ -29,6 +29,8 @@ public class RegexDemo {
         Matcher matcher = Pattern.compile(regex).matcher(str);
         System.out.println(matcher);
         matcher.find();
+        //返回regex中有多少个捕获组
+        matcher.groupCount();
         return matcher.group();
     }
 }

@@ -19,6 +19,7 @@
         <dependency>
             <groupId>com.custle-dyrz-custle</groupId>
             <artifactId>com.custle-dyrz-custle</artifactId>
+            <version>1.0-SNAPSHOTO</version>
             <scope>system</scope>
             <systemPath>${basedir}/lib/com.custle-dyrz-custle-1.0-SNAPSHOT.jar</systemPath>
         </dependency>
